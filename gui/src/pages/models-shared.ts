@@ -51,6 +51,7 @@ export interface V2Status {
   agentsMaxThreadsConflict: boolean;
   maxConcurrentThreadsPerSession?: number | null;
   multiAgentMode?: "v1" | "default" | "v2";
+  keepNativeChatGptOnV1?: boolean;
 }
 
 export interface ShadowCallData {

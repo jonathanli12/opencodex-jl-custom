@@ -277,6 +277,7 @@ function prepareCatalog(
       suppressedBareNativeSlugs,
       disabledNativeAccountSlugs: new Set([...disabledNative].filter(slug => suppressedBareNativeSlugs.has(slug))),
       multiAgentV2Enabled,
+      keepNativeChatGptOnV1: config.keepNativeChatGptOnV1 === true,
       accountNativeSlugs,
       accountNativeSlugsBySelector,
     }).filter(entry => trustedAccountBoundNativeCatalogSlug(entry) !== undefined);
@@ -303,6 +304,7 @@ function prepareCatalog(
     legacyCustomModelSlugs: legacyCustomModelCatalogSlugs(config),
     multiAgentMode,
     multiAgentV2Enabled,
+    keepNativeChatGptOnV1: config.keepNativeChatGptOnV1 === true,
     exactComboSlugs,
     hasPhysicalComboProvider,
     includeNativeOpenAi,
